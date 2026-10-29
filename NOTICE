@@ -1,0 +1,17 @@
+Seicure
+Copyright 2026 SEIZIA
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+----------------------------------------------------------------------
+Third-party components
+----------------------------------------------------------------------
+
+libsodium  (third_party/libsodium)
+    Copyright (c) 2013-2025 Frank Denis <j at pureftpd dot org>
+    Licensed under the ISC License.
+    https://github.com/jedisct1/libsodium
+
+    Vendored unmodified at commit 2c61b49 (release 1.0.22) and linked
+    statically. See third_party/libsodium/VENDORED.txt for how to verify
+    that it matches upstream.
