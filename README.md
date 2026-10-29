@@ -256,4 +256,12 @@ build\tests\seicure_tests.exe
 
 ## 라이선스
 
-`third_party/argon2`는 phc-winner-argon2 (CC0 / Apache-2.0).
+이 저장소의 코드는 **All rights reserved**다. 소스를 공개해 두었을 뿐 사용·복제·수정·재배포를 허락한 것은 아니다. 라이선스 파일이 없는 공개 저장소는 기본적으로 이 상태이며, 여기서는 의도한 것이다.
+
+벤더링한 의존성은 별개의 조건을 따른다.
+
+| 경로 | 출처 | 라이선스 |
+|---|---|---|
+| `third_party/libsodium` | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) 1.0.22 | ISC |
+
+libsodium은 상류 그대로이며 수정하지 않았다. 고정 커밋과 검증 방법은 `third_party/libsodium/VENDORED.txt`에 있다.
