@@ -1,0 +1,31 @@
+#include <windows.h>
+
+// CREATEPROCESS_MANIFEST_RESOURCE_ID (1), RT_MANIFEST (24)
+1 24 "app.manifest"
+
+// Explorer shows the lowest-numbered icon resource for an executable, so this
+// has to stay at 1.
+1 ICON "seicure.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    0,1,0,0
+PRODUCTVERSION 0,1,0,0
+FILEOS         VOS_NT_WINDOWS32
+FILETYPE       VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Seicure - file encryption with metadata hiding"
+            VALUE "FileVersion",     "0.1.0.0"
+            VALUE "ProductName",     "Seicure"
+            VALUE "ProductVersion",  "0.1.0.0"
+            VALUE "OriginalFilename","seicure_gui.exe"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

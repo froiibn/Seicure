@@ -1,0 +1,16 @@
+libsodium, vendored.
+
+  upstream  https://github.com/jedisct1/libsodium.git
+  commit    2c61b49
+  version   1.0.22
+
+Checked in as source rather than as a submodule, deliberately: this is the
+exact code the released binaries are built from, and a clone has to be able to
+reproduce a build without reaching the network or trusting that upstream still
+has that commit.
+
+To verify it is unmodified upstream:
+
+  git clone https://github.com/jedisct1/libsodium.git /tmp/libsodium-check
+  git -C /tmp/libsodium-check checkout 2c61b49
+  diff -r --exclude=.git /tmp/libsodium-check third_party/libsodium

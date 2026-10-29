@@ -1,0 +1,36 @@
+# Default: let git decide, but the rules below override where it matters.
+* text=auto
+
+# These run on Linux and macOS. With CRLF, bash fails on the carriage return
+# with an error that names a command nobody wrote -- and this project ships its
+# packaging scripts to a Mac over scp, so a checkout on Windows must not
+# rewrite them.
+*.sh text eol=lf
+
+# Source is edited on all three platforms. Pinning it to LF keeps a round trip
+# through Windows from showing every line of every file as changed.
+*.c            text eol=lf
+*.h            text eol=lf
+*.cpp          text eol=lf
+*.hpp          text eol=lf
+*.mm           text eol=lf
+*.cmake        text eol=lf
+CMakeLists.txt text eol=lf
+*.md           text eol=lf
+
+# Windows-only, and happier with native endings.
+*.ps1 text eol=crlf
+
+# Left exactly as they are. makensis rejects the installer script without its
+# UTF-8 BOM, and resource files are read by tools fussier than a text editor.
+*.nsi      -text
+*.rc       -text
+*.manifest -text
+
+# Vendored upstream, kept byte-identical so the diff in VENDORED.txt means
+# something.
+third_party/libsodium/** -text
+
+*.ico  binary
+*.icns binary
+*.png  binary
